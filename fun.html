@@ -1,0 +1,130 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurboMate AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <span class="brand-name">TurboMate AI</span>
+            </div>
+
+            <button class="new-chat-btn">
+                <i class="fa-solid fa-plus"></i> New Chat
+            </button>
+
+            <div class="history-section">
+                <p class="section-title">Recent Chats</p>
+                <ul class="history-list">
+                    <li class="active">Project Plan Summary</li>
+                    <li>History Essay Draft</li>
+                    <li>Meeting Notes - Oct 26</li>
+                    <li>Project Plan Draft</li>
+                    <li>Physics Homework Help</li>
+                </ul>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">AD</div>
+                <div class="user-info">
+                    <span class="name">Guest</span>
+                    <span class="status">Student Plan</span>
+                </div>
+                <i class="fa-solid fa-gear settings-icon"></i>
+            </div>
+        </aside>
+
+        <main class="chat-interface">
+            <header class="chat-header">
+                <h2>Project Plan Summary</h2>
+                <button class="clear-btn"><i class="fa-solid fa-broom"></i> Clear Chat</button>
+            </header>
+
+            <div class="chat-window" id="chatWindow">
+                
+                <div class="message ai-message">
+                    <div class="message-avatar">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hello! I'm TurboMate. I can help you summarize documents, draft essays, or answer questions. How can I help you today?</p>
+                    </div>
+                </div>
+
+                <div class="message user-message">
+                    <div class="message-content">
+                        <div class="file-attachment">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>project_brief.pdf</span>
+                        </div>
+                        <p>Can you summarize this PDF for me?</p>
+                    </div>
+                    <div class="message-avatar user-avatar">AD</div>
+                </div>
+
+                <div class="message ai-message">
+                    <div class="message-avatar">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Here is the summary of your project brief:</p>
+                        <ul>
+                            <li><strong>Objective:</strong> Launch lightweight AI assistant.</li>
+                            <li><strong>Target Audience:</strong> Students & General Users.</li>
+                            <li><strong>Key Features:</strong> Templates, File Upload, Toggle Short/Long answers.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-wrapper">
+                
+                <div class="template-chips">
+                    <button class="chip"><i class="fa-regular fa-file-lines"></i> Summarize</button>
+                    <button class="chip"><i class="fa-solid fa-pen-nib"></i> Draft Essay</button>
+                    <button class="chip"><i class="fa-solid fa-chart-simple"></i> Create Report</button>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-top-row">
+                        <textarea id="userInput" placeholder="Ask anything or paste text..."></textarea>
+                    </div>
+                    
+                    <div class="input-bottom-row">
+                        <div class="tools-left">
+                            <button class="attach-btn" title="Upload File">
+                                <i class="fa-solid fa-paperclip"></i> Upload File
+                            </button>
+                            
+                            <div class="toggle-container">
+                                <span class="toggle-label">Short</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="lengthToggle">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="toggle-label">Detailed</span>
+                            </div>
+                        </div>
+
+                        <button class="send-btn" id="sendBtn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
